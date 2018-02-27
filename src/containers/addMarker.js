@@ -27,4 +27,4 @@ let AddMarker = ({ dispatch }) => {
 }
 AddMarker = connect()(AddMarker)
 
-export default AddMarker
+export default AddMarker;

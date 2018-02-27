@@ -1,10 +1,10 @@
-import { combineReducers } from 'redux'
-import markers from './markers'
-import visibilityFilter from './visibilityFilter'
+import { combineReducers } from 'redux';
+import markers from './markers';
+import visibilityFilter from './visibilityFilter';
 
 const markerApp = combineReducers({
   markers,
   visibilityFilter
 })
 
-export default markerApp
+export default markerApp;

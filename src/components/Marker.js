@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Marker = ({ onClick, completed, text }) => (
+const Marker = ({ onClick, active, text }) => (
   <li
     onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
+    className={
+      active
+      ? 'active'
+      : null
+    }
   >
     {text}
   </li>
@@ -14,7 +16,7 @@ const Marker = ({ onClick, completed, text }) => (
 
 Marker.propTypes = {
   onClick: PropTypes.func.isRequired,
-  completed: PropTypes.bool.isRequired,
+  active: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired
 }
 

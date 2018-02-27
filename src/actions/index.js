@@ -16,6 +16,11 @@ export const toggleMarker = (id) => ({
   id
 })
 
+export const setMarkerActive = (id) => ({
+  type: 'MARKER_ACTIVE',
+  id
+})
+
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',

@@ -6,7 +6,8 @@ const markers = (state = [], action) => {
         {
           id: action.id,
           text: action.text,
-          completed: false
+          completed: false,
+          active: true
         }
       ]
     case 'TOGGLE_MARKER':
@@ -15,9 +16,15 @@ const markers = (state = [], action) => {
           ? {...marker, completed: !marker.completed}
           : marker
       )
+    case 'MARKER_ACTIVE':
+      return state.map(marker =>
+        (marker.id === action.id)
+          ? {...marker, active: !marker.active}
+          : marker
+      )
     default:
       return state
   }
 }
 
-export default markers
+export default markers;

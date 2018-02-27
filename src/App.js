@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddMarker from './containers/addMarker';
 import VisibleMarkerList from './containers/visibleMarkerList';
+import Footer from './components/footer';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,6 +15,7 @@ class App extends Component {
         </header>
         <AddMarker />
         <VisibleMarkerList />
+        <Footer />
       </div>
     );
   }
