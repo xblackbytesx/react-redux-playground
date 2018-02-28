@@ -1,9 +1,10 @@
 import React from 'react';
 import AddMarker from './containers/addMarker';
 import VisibleMarkerList from './containers/visibleMarkerList';
+import VisibleMarkerMap from './containers/visibleMarkerMap';
 import Footer from './components/footer';
 import logo from './logo.svg';
-import './App.css';
+import './static/scss/app.css';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       </header>
       <AddMarker />
       <VisibleMarkerList />
+      <VisibleMarkerMap />
       <Footer />
     </div>
   );
