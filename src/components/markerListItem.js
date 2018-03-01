@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 const MarkerListItem = ({ onClick, active, text }) => (
   <li
     onClick={onClick}
-    className={
-      active
-      ? 'list__item--active'
-      : null
-    }
+    className={`list__item ${active ? `list__item--active` : ``}`}
   >
     {text}
   </li>

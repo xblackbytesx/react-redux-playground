@@ -1,3 +1,6 @@
+@import "animations";
+@import "components/all";
+
 $gutter: 16px;
 $gutter-half: ($gutter / 2);
 
@@ -44,10 +47,12 @@ ul li {
     flex: 0 1 250px;
 
     .list__item {
+      border-top: 1px solid #DDD;
+      border-bottom: 1px solid #DDD;
+
       &--active {
         background-color: #CCC;
-        border-top: 1px solid #AAA;
-        border-bottom: 1px solid #AAA;
+        border-color: #AAA;
       }
     }
   }
@@ -59,17 +64,14 @@ ul li {
     background-image: url('../img/map.jpg');
     background-size: cover;
     flex: 1 1 auto;
-
-    div {
-      animation-name: bounce;
-      transform-origin: center bottom;
-    }
+    overflow: hidden;
 
     .map__item {
+      position: absolute;
+      z-index: 10;
+
       &--active {
         background-color: #FF0000;
-        animation-duration: 1s;
-        animation-fill-mode: both;
       }
     }
   }

@@ -1,4 +1,9 @@
 const markers = (state = [], action) => {
+  
+  this.randomNumber = (max, min) => (
+    Math.floor(Math.random()*(max-min+1)+min)
+  );
+  
   switch (action.type) {
     case 'ADD_MARKER':
       return [
@@ -7,7 +12,9 @@ const markers = (state = [], action) => {
           id: action.id,
           text: action.text,
           completed: false,
-          active: false
+          active: false,
+          latitude: this.randomNumber(95, 5),
+          logitude: this.randomNumber(95, 5)
         }
       ]
     case 'TOGGLE_MARKER':
