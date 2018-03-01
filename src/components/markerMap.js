@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MarkerMapItem from './markerMapItem';
+import Map from '../static/img/map.jpg';
 
 const MarkerMap = ({ markers, onMarkerClick }) => (
   <div className="property-map__map">

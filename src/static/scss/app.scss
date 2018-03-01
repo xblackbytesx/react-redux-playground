@@ -1,34 +1,13 @@
-// .App {
-//   text-align: center;
-// }
-//
-// .App-logo {
-//   animation: App-logo-spin infinite 20s linear;
-//   height: 80px;
-// }
-//
-// .App-header {
-//   background-color: #222;
-//   height: 150px;
-//   padding: 20px;
-//   color: white;
-// }
-//
-// .App-title {
-//   font-size: 1.5em;
-// }
-//
-// .App-intro {
-//   font-size: large;
-// }
-//
-// @keyframes App-logo-spin {
-//   from { transform: rotate(0deg); }
-//   to { transform: rotate(360deg); }
-// }
-
 $gutter: 16px;
 $gutter-half: ($gutter / 2);
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 html,
 body {
@@ -47,34 +26,8 @@ ul {
 }
 
 ul li {
-  padding: 16px;
+  padding: $gutter;
 }
-
-@keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
-    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0,0,0);
-  }
-
-  40%, 43% {
-    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -30px, 0);
-  }
-
-  70% {
-    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -15px, 0);
-  }
-
-  90% {
-    -webkit-transform: translate3d(0,-4px,0);
-    transform: translate3d(0,-4px,0);
-  }
-}
-
-// .active {
-//   background: #EEE;
-// }
 
 .form-add {
   background-color: #DDD;
@@ -89,10 +42,22 @@ ul li {
     background-color: #DDD;
     border: 1px solid #CCC;
     flex: 0 1 250px;
+
+    .list__item {
+      &--active {
+        background-color: #CCC;
+        border-top: 1px solid #AAA;
+        border-bottom: 1px solid #AAA;
+      }
+    }
   }
 
   &__map {
+    position: relative;
+    padding: $gutter;
     background-color: #EEE;
+    background-image: url('../img/map.jpg');
+    background-size: cover;
     flex: 1 1 auto;
 
     div {
@@ -100,10 +65,12 @@ ul li {
       transform-origin: center bottom;
     }
 
-    .active {
-      background: #FF0000;
-      animation-duration: 1s;
-      animation-fill-mode: both;
+    .map__item {
+      &--active {
+        background-color: #FF0000;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
     }
   }
 }

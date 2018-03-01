@@ -6,7 +6,7 @@ const MarkerMapItem = ({ onClick, active, text }) => (
     onClick={onClick}
     className={
       active
-      ? 'active'
+      ? 'map__item--active'
       : null
     }
   >
