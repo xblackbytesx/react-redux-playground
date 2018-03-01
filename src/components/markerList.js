@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Marker from './Marker';
+import MarkerListItem from './markerListItem';
 
 const MarkerList = ({ markers, onMarkerClick }) => (
-  <ul>
-    {markers.map(marker =>
-      <Marker
-        key={marker.id}
-        {...marker}
-        onClick={() => onMarkerClick(marker.id)}
-      />
-    )}
-  </ul>
+  <div className="property-map__list">
+    <ul>
+      {markers.map(marker =>
+        <MarkerListItem
+          key={marker.id}
+          {...marker}
+          onClick={() => onMarkerClick(marker.id)}
+        />
+      )}
+    </ul>
+  </div>
 )
 
 MarkerList.propTypes = {

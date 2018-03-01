@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Marker = ({ onClick, active, text }) => (
+const MarkerListItem = ({ onClick, active, text }) => (
   <li
     onClick={onClick}
     className={
@@ -14,10 +14,10 @@ const Marker = ({ onClick, active, text }) => (
   </li>
 )
 
-Marker.propTypes = {
+MarkerListItem.propTypes = {
   onClick: PropTypes.func.isRequired,
   active: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired
 }
 
-export default Marker
+export default MarkerListItem;

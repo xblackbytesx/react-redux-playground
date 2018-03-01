@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MarkerMapItem from './markerMapItem';
 
 const MarkerMap = ({ markers, onMarkerClick }) => (
-  <div>
+  <div className="property-map__map">
     {markers.map(marker =>
       <MarkerMapItem
         key={marker.id}

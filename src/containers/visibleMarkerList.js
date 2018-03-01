@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { toggleMarker, setMarkerActive } from '../actions';
-import MarkerList from '../components/MarkerList';
+import MarkerList from '../components/markerList';
 
 const getVisibleMarkers = (markers, filter) => {
   switch (filter) {

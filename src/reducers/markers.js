@@ -7,7 +7,7 @@ const markers = (state = [], action) => {
           id: action.id,
           text: action.text,
           completed: false,
-          active: true
+          active: false
         }
       ]
     case 'TOGGLE_MARKER':
