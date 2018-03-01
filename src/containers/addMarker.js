@@ -17,7 +17,7 @@ let AddMarker = ({ dispatch }) => {
       }}>
         <input ref={node => {
           input = node
-        }} />
+        }} placeholder="Locatie toevoegen" />
         <button type="submit">
           Add Marker
         </button>

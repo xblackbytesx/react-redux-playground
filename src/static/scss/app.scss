@@ -1,9 +1,6 @@
+@import "settings";
 @import "animations";
 @import "components/all";
-
-$gutter: 16px;
-$gutter-half: ($gutter / 2);
-
 
 html {
   box-sizing: border-box;
@@ -33,8 +30,16 @@ ul li {
 }
 
 .form-add {
-  background-color: #DDD;
+  position: relative;
+  background-color: #F7A100;
   padding: $gutter;
+  z-index: 10;
+
+  input {
+    background: #FFF;
+    padding: $gutter-half;
+    border: 1px solid darken(#F7A100, 5);
+  }
 }
 
 .property-map {
@@ -42,9 +47,11 @@ ul li {
   min-height: 100%;
 
   &__list {
-    background-color: #DDD;
+    background-color: #FFF;
     border: 1px solid #CCC;
     flex: 0 1 250px;
+    box-shadow: 6px 0px 10px 0px rgba(0,0,0,.3);
+    z-index: 5;
 
     .list__item {
       border-top: 1px solid #DDD;
