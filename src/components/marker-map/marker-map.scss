@@ -1,0 +1,22 @@
+@import "../../static/scss/settings";
+
+.property-map {
+  &__map {
+    position: relative;
+    padding: $gutter;
+    background-color: #EEE;
+    background-image: url('map.jpg');
+    background-size: cover;
+    flex: 1 1 auto;
+    overflow: hidden;
+
+    .map__item {
+      position: absolute;
+      z-index: 10;
+
+      &--active {
+        background-color: #FF0000;
+      }
+    }
+  }
+}

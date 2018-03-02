@@ -1,6 +1,5 @@
 @import "settings";
 @import "animations";
-@import "components/all";
 
 html {
   box-sizing: border-box;
@@ -45,41 +44,4 @@ ul li {
 .property-map {
   display: flex;
   min-height: 100%;
-
-  &__list {
-    background-color: #FFF;
-    border: 1px solid #CCC;
-    flex: 0 1 250px;
-    box-shadow: 6px 0px 10px 0px rgba(0,0,0,.3);
-    z-index: 5;
-
-    .list__item {
-      border-top: 1px solid #DDD;
-      border-bottom: 1px solid #DDD;
-
-      &--active {
-        background-color: #CCC;
-        border-color: #AAA;
-      }
-    }
-  }
-
-  &__map {
-    position: relative;
-    padding: $gutter;
-    background-color: #EEE;
-    background-image: url('../img/map.jpg');
-    background-size: cover;
-    flex: 1 1 auto;
-    overflow: hidden;
-
-    .map__item {
-      position: absolute;
-      z-index: 10;
-
-      &--active {
-        background-color: #FF0000;
-      }
-    }
-  }
 }

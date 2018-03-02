@@ -11,8 +11,8 @@ export const setVisibilityFilter = (filter) => ({
   filter
 })
 
-export const toggleMarker = (id) => ({
-  type: 'TOGGLE_MARKER',
+export const resetMarkers = (id) => ({
+  type: 'RESET_MARKERS',
   id
 })
 

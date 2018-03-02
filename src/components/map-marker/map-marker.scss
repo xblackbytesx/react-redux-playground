@@ -1,8 +1,12 @@
-.pin {
+@import "../../static/scss/settings";
+
+$marker-bg-color: #89849B;
+
+.map-marker {
   width: 30px;
   height: 30px;
   border-radius: 50% 50% 50% 0;
-  background: #89849b;
+  background: $marker-bg-color;
   position: absolute;
   transform: rotate(-45deg);
   left: 50%;
@@ -23,7 +27,7 @@
   }
 }
 
-.pulse {
+.marker-pulse {
   background: rgba(0,0,0,0.2);
   border-radius: 50%;
   height: 14px;
@@ -37,11 +41,14 @@
 }
 
 .map__item--active {
-  .pin {
+  .map-marker {
     background: #0071B3;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 1s;
   }
 
-  .pulse {
+  .marker-pulse {
     &:after {
       content: "";
       border-radius: 50%;
@@ -52,7 +59,7 @@
       animation: pulsate 1s ease-out;
       animation-iteration-count: infinite;
       opacity: 0.0;
-      box-shadow: 0 0 1px 2px #89849b;
+      box-shadow: 0 0 1px 2px $marker-bg-color;
       animation-delay: 1.1s;
     }
   }

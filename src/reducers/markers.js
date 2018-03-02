@@ -1,9 +1,9 @@
 const markers = (state = [], action) => {
-  
+
   this.randomNumber = (max, min) => (
     Math.floor(Math.random()*(max-min+1)+min)
   );
-  
+
   switch (action.type) {
     case 'ADD_MARKER':
       return [
@@ -17,11 +17,11 @@ const markers = (state = [], action) => {
           logitude: this.randomNumber(95, 5)
         }
       ]
-    case 'TOGGLE_MARKER':
+    case 'RESET_MARKERS':
       return state.map(marker =>
-        (marker.id === action.id)
-          ? {...marker, completed: !marker.completed}
-          : marker
+        (marker)
+          ? {...marker, active: marker.active}
+          : {...marker, active: marker.active}
       )
     case 'MARKER_ACTIVE':
       return state.map(marker =>

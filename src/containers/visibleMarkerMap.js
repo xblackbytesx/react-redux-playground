@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { toggleMarker, setMarkerActive } from '../actions';
-import MarkerMap from '../components/markerMap';
+import { resetMarkers, setMarkerActive } from '../actions';
+import MarkerMap from '../components/marker-map/marker-map';
 
 const getVisibleMarkers = (markers, filter) => {
   switch (filter) {
@@ -20,7 +20,6 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-  // onMarkerClick: toggleMarker
   onMarkerClick: setMarkerActive
 }
 

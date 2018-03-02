@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addMarker } from '../actions';
+import Button from '../components/button/button';
 
 let AddMarker = ({ dispatch }) => {
   let input
@@ -18,9 +19,9 @@ let AddMarker = ({ dispatch }) => {
         <input ref={node => {
           input = node
         }} placeholder="Locatie toevoegen" />
-        <button type="submit">
-          Add Marker
-        </button>
+        <Button type="submit">
+          Locatie toevoegen
+        </Button>
       </form>
     </div>
   )

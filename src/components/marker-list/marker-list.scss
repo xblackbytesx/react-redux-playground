@@ -1,0 +1,26 @@
+@import "../../static/scss/settings";
+
+.property-map {
+  &__list {
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    flex: 0 1 300px;
+    box-shadow: 6px 0px 10px 0px rgba(0,0,0,.3);
+    z-index: 5;
+
+    .list__item {
+      border-top: 1px solid #DDD;
+      border-bottom: 1px solid #DDD;
+
+      &--active {
+        background-color: #CCC;
+        border-color: #AAA;
+      }
+    }
+
+    &__empty {
+      padding: $gutter;
+      text-align: center;
+    }
+  }
+}
