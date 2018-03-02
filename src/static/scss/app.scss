@@ -28,11 +28,16 @@ ul li {
   padding: $gutter;
 }
 
-.form-add {
+header {
+  display: flex;
   position: relative;
   background-color: #F7A100;
   padding: $gutter;
   z-index: 10;
+}
+
+.form-add {
+  flex: 0 1 auto;
 
   input {
     background: #FFF;

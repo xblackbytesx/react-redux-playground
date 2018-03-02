@@ -1,0 +1,21 @@
+@import "../../static/scss/settings";
+
+$link-color: $color-purple-1;
+$link-active-color: $link-color;
+
+.filter {
+  flex: 1 1 auto;
+  align-self: center;
+  margin-left: $gutter-double;
+  color: #FFF;
+
+  &__link {
+    text-decoration: none;
+    color: $link-color;
+
+    &--active {
+      color: $link-active-color;
+      font-weight: 700;
+    }
+  }
+}

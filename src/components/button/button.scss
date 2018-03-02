@@ -1,6 +1,6 @@
 @import "../../static/scss/settings";
 
-$button-bg-color: #0071B3;
+$button-bg-color: $color-purple-1;
 $button-hover-bg-color: darken($button-bg-color, 10);
 $button-border-color: $button-bg-color;
 $button-hover-border-color: $button-hover-bg-color;

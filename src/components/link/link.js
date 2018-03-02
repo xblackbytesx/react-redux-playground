@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Link = ({ active, children, onClick }) => {
   if (active) {
-    return <span>{children}</span>
+    return <span className="filter__link--active">{children}</span>
   }
 
   return (
@@ -13,6 +13,7 @@ const Link = ({ active, children, onClick }) => {
          e.preventDefault()
          onClick()
        }}
+       className="filter__link"
     >
       {children}
     </a>

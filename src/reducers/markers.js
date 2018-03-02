@@ -17,12 +17,6 @@ const markers = (state = [], action) => {
           logitude: this.randomNumber(95, 5)
         }
       ]
-    case 'RESET_MARKERS':
-      return state.map(marker =>
-        (marker)
-          ? {...marker, active: marker.active}
-          : {...marker, active: marker.active}
-      )
     case 'MARKER_ACTIVE':
       return state.map(marker =>
         (marker.id === action.id)
