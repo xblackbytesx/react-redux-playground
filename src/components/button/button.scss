@@ -17,4 +17,8 @@ button {
     background-color: $button-hover-bg-color;
     background-color: $button-hover-border-color;
   }
+
+  &.add-location {
+    margin-left: $gutter;
+  }
 }

@@ -43,9 +43,6 @@ $marker-bg-color: #89849B;
 .map__item--active {
   .map-marker {
     background: #0071B3;
-    animation-name: bounce;
-    animation-fill-mode: both;
-    animation-duration: 1s;
   }
 
   .marker-pulse {
